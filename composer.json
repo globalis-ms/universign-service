@@ -1,0 +1,25 @@
+{
+    "name": "globalis/universign-service",
+    "description": "PHP library for universign service",
+    "type": "library",
+    "homepage": "https://github.com/globalis-ms/universign-service",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Romain GUGERT",
+            "email": "romain.gugert@globalis-ms.com"
+        },
+        {
+            "name":"GLOBALIS media systems",
+            "homepage":"https://www.globalis-ms.com/"
+        }
+    ],
+    "require": {
+        "phpxmlrpc/phpxmlrpc": "^4.2"
+    },
+    "autoload": {
+       "psr-4": {
+           "Globalis\\Universign\\": "src"
+       }
+    }
+}
