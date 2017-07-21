@@ -4,7 +4,7 @@ namespace Globalis\Universign\Response;
 
 use PhpXmlRpc\Value;
 
-class TransactionResponse
+class TransactionResponse extends Base
 {
     protected $attributesDefinitions = [
         /**

@@ -6,26 +6,10 @@ use Globalis\Universign\Response\TransactionDocument;
 use Globalis\Universign\Response\TransactionInfo;
 use Globalis\Universign\Request\TransactionRequest;
 use Globalis\Universign\Response\TransactionResponse;
-use PhpXmlRpc\Client;
-use PhpXmlRpc\Request;
 use PhpXmlRpc\Value;
-use RuntimeException;
 
-class Requester
+class Requester extends Base
 {
-    /**
-     * Xml Rpc Client
-     *
-     * @var \PhpXmlRpc;
-     */
-    protected $client;
-
-    public function __construct(Client $client)
-    {
-        $this->client = $client;
-        $this->client->return_type = 'xmlrpcvals';
-    }
-
     /**
      * Requests a new transaction for the client signature service.
      *
@@ -116,35 +100,6 @@ class Requester
             $this->sendRequest(
                 'requester.getTransactionInfo',
                 new Value($customerId, 'string')
-            )
-        );
-    }
-
-    protected function buildRequest($method, Value $data)
-    {
-        return new Request(
-            $method,
-            [
-                $data
-            ]
-        );
-    }
-
-    protected function sendRequest($method, Value $data)
-    {
-        $response = $this->client->send(
-            $this->buildRequest($method, $data)
-        );
-
-        if (!$response->faultCode()) {
-            return $response->value();
-        }
-        throw new RuntimeException(
-            sprintf(
-                'Unsuccessful request: `%s` resulted in a `%s %s` response',
-                $method,
-                $response->faultCode(),
-                $response->faultString()
             )
         );
     }
