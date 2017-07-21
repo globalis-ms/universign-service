@@ -57,7 +57,8 @@ class TransactionInfo extends Base
         'transactionId' => true,
     ];
 
-    protected function parseSignerInfos(Value $value) {
+    protected function parseSignerInfos(Value $value)
+    {
         $data = [];
         foreach ($value as $signer) {
             $data[] = new SignerInfo($signer);
@@ -65,7 +66,8 @@ class TransactionInfo extends Base
         return $data;
     }
 
-    protected function parseInitiatorInfo(Value $value) {
+    protected function parseInitiatorInfo(Value $value)
+    {
         return new InitiatorInfo($value);
     }
 }

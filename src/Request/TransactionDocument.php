@@ -2,7 +2,6 @@
 
 namespace Globalis\Universign\Request;
 
-
 class TransactionDocument extends Base
 {
     protected $attributesDefinitions = [

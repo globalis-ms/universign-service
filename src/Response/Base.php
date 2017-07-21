@@ -28,7 +28,7 @@ abstract class Base
             }
             $values = $values[$key];
 
-            if(is_callable([$this, $this->attributesDefinitions[$key]])) {
+            if (is_callable([$this, $this->attributesDefinitions[$key]])) {
                 return $this->{$this->attributesDefinitions[$key]}($values);
             }
         }

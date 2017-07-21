@@ -27,7 +27,8 @@ abstract class Data
         return new PhpXmlRpcValue($build, PhpXmlRpcValue::$xmlrpcStruct);
     }
 
-    protected function buildRpcValue($value, $type = null) {
+    protected function buildRpcValue($value, $type = null)
+    {
         if (!$type) {
             $type = gettype($value);
         }
