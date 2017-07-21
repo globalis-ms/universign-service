@@ -6,7 +6,7 @@ use \InvalidArgumentException;
 use \UnexpectedValueException;
 use PhpXmlRpc\Value as PhpXmlRpcValue;
 
-abstract class Data
+abstract class Base
 {
 
     protected $attributes = [];

@@ -1,5 +1,6 @@
 {
     "name": "globalis/universign-service",
+    "description": "PHP library for universign service",
     "type": "library",
     "homepage": "https://github.com/globalis-ms/universign-service",
     "license": "MIT",
