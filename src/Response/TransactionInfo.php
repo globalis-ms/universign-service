@@ -49,7 +49,7 @@ class TransactionInfo extends Base
          * This id can be specified when creating the transaction request
          * and is used as additional information to identify the transaction.
          */
-        'customerId' => true,
+        'customId' => true,
         /**
          * This id is generated when creating the transaction request
          * and is the unique identifier of this transaction.
