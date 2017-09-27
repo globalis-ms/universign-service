@@ -62,7 +62,7 @@ class Requester extends Base
         $data = [];
         $values = $this->sendRequest(
             'requester.getDocumentsByCustomId',
-            new Value($transactionId, 'string')
+            new Value($customerId, 'string')
         );
 
         foreach ($values as $key => $value) {
