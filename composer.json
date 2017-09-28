@@ -1,17 +1,17 @@
 {
-    "name": "renaud22/universign-service",
+    "name": "globalis/universign-service",
     "description": "PHP library for universign service",
     "type": "library",
-    "homepage": "https://github.com/renaud22/universign-service",
+    "homepage": "https://github.com/globalis-ms/universign-service",
     "license": "MIT",
     "authors": [
         {
-            "name": "Renaud CHARPENTIER",
-            "email": "r.charpentier@santiane.fr"
+            "name": "Romain GUGERT",
+            "email": "romain.gugert@globalis-ms.com"
         },
         {
-            "name":"Santiane",
-            "homepage":"http://www.santiane.fr/"
+            "name":"GLOBALIS media systems",
+            "homepage":"https://www.globalis-ms.com/"
         }
     ],
     "require": {
@@ -19,7 +19,7 @@
     },
     "autoload": {
        "psr-4": {
-           "Renaud22\\Universign\\": "src"
+           "Globalis\\Universign\\": "src"
        }
     }
 }
