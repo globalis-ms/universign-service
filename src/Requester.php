@@ -98,7 +98,7 @@ class Requester extends Base
     {
         return new TransactionInfo(
             $this->sendRequest(
-                'requester.getTransactionInfo',
+                'requester.getTransactionInfoByCustomId',
                 new Value($customerId, 'string')
             )
         );
