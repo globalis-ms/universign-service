@@ -103,4 +103,20 @@ class Requester extends Base
             )
         );
     }
+
+    /**
+     * Cancel a transaction in progress with this id.
+     *
+     * @param   string  $transactionId
+     * @return  TransactionInfo
+     */
+    public function cancelTransaction($transactionId)
+    {
+        return new TransactionInfo(
+            $this->sendRequest(
+                'requester.cancelTransaction',
+                new Value($transactionId, 'string')
+            )
+        );
+    }
 }
