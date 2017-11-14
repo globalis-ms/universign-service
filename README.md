@@ -36,9 +36,9 @@ $signer1
     ->setLastname('Dupond')
     ->setPhoneNum('0999999999')
     ->setEmailAddress('jean.dupond@example.com')
-    ->setSuccessURLs('https://www.universign.eu/fr/sign/success/')
-    ->setCancelURLs('https://www.universign.eu/fr/sign/cancel/')
-    ->setFailURLs('https://www.universign.eu/fr/sign/failed/')
+    ->setSuccessURL('https://www.universign.eu/fr/sign/success/')
+    ->setCancelURL('https://www.universign.eu/fr/sign/cancel/')
+    ->setFailURL('https://www.universign.eu/fr/sign/failed/')
     ->setProfile('profil_vendeur');
 
 $signer2 = new \Globalis\Universign\Request\TransactionSigner();
@@ -47,9 +47,9 @@ $signer2
     ->setLastname('Martin')
     ->setPhoneNum('0888888888')
     ->setEmailAddress('pierre.martin@example.com')
-    ->setSuccessURLs('https://www.universign.eu/fr/sign/success/')
-    ->setCancelURLs('https://www.universign.eu/fr/sign/cancel/')
-    ->setFailURLs('https://www.universign.eu/fr/sign/failed/')
+    ->setSuccessURL('https://www.universign.eu/fr/sign/success/')
+    ->setCancelURL('https://www.universign.eu/fr/sign/cancel/')
+    ->setFailURL('https://www.universign.eu/fr/sign/failed/')
     ->setProfile('profil_client');
 
 $signers = [$signer1, $signer2];
@@ -123,8 +123,8 @@ $request->addDocument($doc1)
     )
     ->setDescription("Demonstration de la signature Universign")
     ->setProfile("profile_demo")
-    ->certificateTypes('simple')
-    ->language('fr');
+    ->setCertificateTypes('simple')
+    ->setLanguage('fr');
 
 // Create XmlRpc Client
 $client = new \PhpXmlRpc\Client('https://url.to.universign/end_point/');

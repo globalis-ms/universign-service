@@ -79,6 +79,7 @@ abstract class Base
         }
 
         switch ($this->attributesDefinitions[$name]) {
+            case 'base64':
             case 'string':
                 if (!is_string($value)) {
                     throw new UnexpectedValueException("$name must be of the type string, " . gettype($value) . " given");
