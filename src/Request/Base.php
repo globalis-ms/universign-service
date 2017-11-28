@@ -63,10 +63,15 @@ abstract class Base
         }
     }
 
+    protected function extractParamNameFromSetter($method)
+    {
+        return lcfirst(substr($method, 3));
+    }
+
     public function __call($method, $parameters)
     {
         if (preg_match('/^set(.+)$/', $method)) {
-            $name = lcfirst(substr($method, 3));
+            $name = $this->extractParamNameFromSetter($method);
             $this->{$name} = $parameters[0];
             return $this;
         }
