@@ -3,6 +3,7 @@
 namespace Globalis\Universign\Response;
 
 use Datetime;
+use DateTimeZone;
 use PhpXmlRpc\Value;
 use stdClass;
 use UnexpectedValueException;
@@ -34,7 +35,7 @@ abstract class Base
         }
         switch ($values->scalartyp()) {
             case 'dateTime.iso8601':
-                return  Datetime::createFromFormat('Ymd\TH:i:s', $values->scalarval());
+                return  Datetime::createFromFormat('Ymd\TH:i:s', $values->scalarval(), new DateTimeZone('UTC'));
             case 'array':
                 $data = [];
                 foreach ($values->scalarval() as $val) {
