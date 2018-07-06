@@ -96,7 +96,7 @@ $signatureFieldsDoc2 = [$signatureField3, $signatureField4];
 
 // Documents
 $doc1 = new \Globalis\Universign\Request\TransactionDocument();
-$doc1->setPath('doc/Template_2.pdf')
+$doc1->setPath('doc/Template_1.pdf')
     ->setSignatureFields($signatureFieldsDoc1);
 
 $doc2 = new \Globalis\Universign\Request\TransactionDocument();
