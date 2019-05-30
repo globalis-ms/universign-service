@@ -123,7 +123,7 @@ $request->addDocument($doc1)
     )
     ->setDescription("Demonstration de la signature Universign")
     ->setProfile("profile_demo")
-    ->setCertificateTypes('simple')
+    ->setCertificateType('simple')
     ->setLanguage('fr');
 
 // Create XmlRpc Client
